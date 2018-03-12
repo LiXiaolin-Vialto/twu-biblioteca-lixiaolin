@@ -18,6 +18,7 @@ public class LibraryServiceTest {
         outputStream = new ByteArrayOutputStream();
         console = System.out;
         System.setOut(new PrintStream(outputStream));
+
     }
 
     @After
@@ -31,5 +32,14 @@ public class LibraryServiceTest {
         service.WelcomMessage();
         String welcomeMessage = "Welcome To Biblioteca Library\n";
         Assert.assertEquals(welcomeMessage, outputStream.toString());
+    }
+
+    @Test
+    public void should_get_bookList() {
+        LibraryService service = new LibraryService();
+        service.BookList();
+        String bookListStr = "Harry Potter JKR HS\nDouble City Charles HS\nThinking in Java Bruce JD\n";
+        Assert.assertEquals(bookListStr, outputStream.toString());
+
     }
 }
