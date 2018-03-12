@@ -12,7 +12,7 @@ public class LibraryService {
         }
     };
     public void WelcomMessage() {
-        System.out.println("Welcome To Biblioteca Library");
+        System.out.print("Welcome To Biblioteca Library");
     }
 
     public void BookList() {

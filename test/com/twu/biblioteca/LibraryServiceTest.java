@@ -30,7 +30,7 @@ public class LibraryServiceTest {
     public void should_print_welcome_message() {
         LibraryService service = new LibraryService();
         service.WelcomMessage();
-        String welcomeMessage = "Welcome To Biblioteca Library\n";
+        String welcomeMessage = "Welcome To Biblioteca Library";
         Assert.assertEquals(welcomeMessage, outputStream.toString());
     }
 
