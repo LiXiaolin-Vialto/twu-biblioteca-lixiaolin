@@ -11,8 +11,10 @@ public class LibraryRouter {
     }
 
     public void Message(){
-        if (state == RouteState.Initialize) {
-            service.WelcomMessage();
+        switch (state) {
+            case Initialize: service.WelcomMessage(); break;
+            case MainMenu: service.BookList();break;
+            default:service.WelcomMessage();
         }
     }
 }

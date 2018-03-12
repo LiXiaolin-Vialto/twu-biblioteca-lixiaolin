@@ -31,4 +31,12 @@ public class LibraryShellTest {
         String welcomeMessage = "Welcome To Biblioteca Library";
         Assert.assertEquals(welcomeMessage, outputStream.toString());
     }
+
+    @Test
+    public void should_get_Mainmenu() {
+        LibraryShell shell = new LibraryShell(RouteState.MainMenu);
+        shell.excute();
+        String mainMenuMessage = "Harry Potter JKR HS\nDouble City Charles HS\nThinking in Java Bruce JD\n";
+        Assert.assertEquals(mainMenuMessage, outputStream.toString());
+    }
 }
