@@ -1,11 +1,21 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Module;
 
 public class Book {
+    private int Id;
     private String name;
     private String author;
     private String publishCompany;
+    private boolean isChecked;
 
-    public Book(String name, String author, String publishCompany) {
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public void setChecked(boolean checked) {
+        isChecked = checked;
+    }
+
+    public Book(int id, String name, String author, String publishCompany) {
         this.name = name;
         this.author = author;
         this.publishCompany = publishCompany;
